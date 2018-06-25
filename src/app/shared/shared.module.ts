@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { SliderModule } from 'ngx-slider';
 import { WelcomeComponent } from '../Home/welcome/welcome.component';
 import { HomeComponent } from '../Home/home/home.component';
-import {RouterModule} from "@angular/router";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryComponent } from './category/category.component';
-
+import {BookService} from "./service/service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   imports: [
     CommonModule,
     SliderModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [
     HeaderComponent,
@@ -32,8 +34,10 @@ import { CategoryComponent } from './category/category.component';
     WelcomeComponent,
     NotFoundComponent,
     CategoryComponent,
-    SliderModule,
-    RouterModule
+    SliderModule
+  ],
+  providers: [
+    BookService
   ]
 })
 export class SharedModule { }

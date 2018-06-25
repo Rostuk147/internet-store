@@ -1,20 +1,95 @@
 {
-  "category": [
+
+  "books": [
     {
-      "js": [
-        {
-          "angular": "autor1"
-        }
-      ]
-    }
-  ],
-  "users": [
-    {
-      "name": "sdfedc",
-      "email": "mail@yandex.ru",
-      "password": "123qwesfds",
-      "select": "Male",
+      "category": "js",
+      "name": "book1",
+      "author": "author1",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 10,
       "id": 1
+    },
+    {
+      "category": "js",
+      "name": "book2",
+      "author": "author2",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 210,
+      "id": 2
+    },
+    {
+      "category": "js",
+      "name": "book3",
+      "author": "author3",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 110,
+      "id": 3
+    },
+    {
+      "category": "java",
+      "name": "book4",
+      "author": "author4",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 0,
+      "id": 4
+    },
+    {
+      "category": "js",
+      "name": "book5",
+      "author": "author5",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 1880,
+      "id": 5
+    },
+    {
+      "category": "java",
+      "name": "book6",
+      "author": "author6",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 1220,
+      "id": 6
+    },
+    {
+      "category": "java",
+      "name": "book7",
+      "author": "author7",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 150,
+      "id": 7
+    },
+    {
+      "category": "php",
+      "name": "book8",
+      "author": "author8",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 130,
+      "id": 8
+    },
+    {
+      "category": "php",
+      "name": "book9",
+      "author": "author9",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 120,
+      "id": 9
+    },
+    {
+      "category": "js",
+      "name": "book10",
+      "author": "author10",
+      "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription description description description description",
+      "photo": "http://rta.org.af/eng/wp-content/uploads/2016/02/book.png",
+      "price": 110,
+      "id": 10
     }
   ]
 }

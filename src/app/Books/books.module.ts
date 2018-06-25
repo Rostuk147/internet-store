@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BooksComponent } from './books.component';
+import {SharedModule} from "../shared/shared.module";
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [BooksComponent],
-  exports: [BooksComponent]
+  exports: []
 })
 export class BooksModule { }
