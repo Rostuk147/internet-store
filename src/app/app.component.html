@@ -1,9 +1,25 @@
 <div class="wrapper">
   <app-header></app-header>
   <div class="content">
-    Content
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <aside class="categories">
+            <app-category></app-category>
+          </aside>
+        </div>
+        <div class="col-md-8">
+          <div class="content-wrapp">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer>
     <app-footer></app-footer>
   </footer>
 </div>
+
+
+<button (click)="get()">Get</button>
