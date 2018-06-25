@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  // get(){
+  //   return fetch(`http://localhost:3000/category?js`)
+  //     .then(res => res.json())
+  //     .catch(err => console.log(err))
+  // }
+
 }
+
+

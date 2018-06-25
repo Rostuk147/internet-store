@@ -1,0 +1,23 @@
+{
+  "category": [
+    {
+      "js": [
+        {
+          "angular": "autor1"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "name": "sdfedc",
+      "email": "mail@yandex.ru",
+      "password": "123qwesfds",
+      "select": "Male",
+      "id": 1
+    }
+  ]
+}
+
+
+
