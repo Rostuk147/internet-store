@@ -15,7 +15,8 @@ export class BookService extends Api{
   }
 
   getAllBooks() {
-    return this.get('books?category=js&_sort=price&_order=asc')
+    // return this.get('books?category=js&_sort=price&_order=asc')
+    return this.get('books')
   }
 
   getSingleBook(id){

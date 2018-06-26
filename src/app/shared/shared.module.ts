@@ -9,7 +9,7 @@ import { WelcomeComponent } from '../Home/welcome/welcome.component';
 import { HomeComponent } from '../Home/home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryComponent } from './category/category.component';
-import {BookService} from "./service/service";
+import {BookService} from "./service/book.service";
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 

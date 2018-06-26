@@ -12,7 +12,7 @@ export class BooksComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.navigate(['books/catalog']);
+
   }
 
 }
