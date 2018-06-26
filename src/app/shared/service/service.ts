@@ -18,6 +18,11 @@ export class BookService extends Api{
     return this.get('books?category=js&_sort=price&_order=asc')
   }
 
+  getSingleBook(id){
+    return this.get(`books?id=${id}`)
+      .map((book) => book[0] ? book[0] : undefined);
+  }
+
 
 
 }

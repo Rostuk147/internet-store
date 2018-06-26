@@ -11,14 +11,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CategoryComponent } from './category/category.component';
 import {BookService} from "./service/service";
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 
 
 @NgModule({
   imports: [
     CommonModule,
-    SliderModule,
+    HttpClientModule,
     RouterModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    FormsModule,
+    SliderModule,
   ],
   declarations: [
     HeaderComponent,
@@ -34,7 +37,10 @@ import {HttpClientModule} from "@angular/common/http";
     WelcomeComponent,
     NotFoundComponent,
     CategoryComponent,
-    SliderModule
+    SliderModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     BookService

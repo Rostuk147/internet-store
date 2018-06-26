@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BookService} from "../shared/service/service";
-import {Book} from "../shared/model/books.model";
-
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -11,22 +9,10 @@ import {Book} from "../shared/model/books.model";
 })
 export class BooksComponent implements OnInit {
 
-  allBooks: Book[] = [];
-
-
-  constructor(
-  private service: BookService
-
-  ) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.service.getAllBooks()
-      .subscribe((books:Book[])=>{
-        this.allBooks = books;
-      })
+    this.router.navigate(['books/catalog']);
   }
-
-
-
 
 }
