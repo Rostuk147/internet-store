@@ -36,7 +36,12 @@ export class BooksCatalogComponent implements OnInit {
     localStorage.setItem('orderBookId', JSON.stringify(this.orderBook));
   };
 
-
+  test(){
+    this.service.test()
+      .subscribe((data)=>{
+        console.log(data)
+      })
+  }
 
 
 

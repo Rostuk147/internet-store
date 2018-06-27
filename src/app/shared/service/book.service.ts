@@ -24,6 +24,10 @@ export class BookService extends Api{
       .map((book) => book[0] ? book[0] : undefined);
   }
 
+  test(){
+    return this.get(`books?name_like=^php`);
+  }
+
 
 
 }
