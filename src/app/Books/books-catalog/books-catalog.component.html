@@ -17,6 +17,10 @@
           </ul>
           <div class="card-body">
             <a href="#" class="card-link" [routerLink]="['book', book.id]"> Card link</a>
+
+            <div class="button-wrapp">
+              <button  type="button" class="btn btn-success" (click)="addBook(book.id)">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>

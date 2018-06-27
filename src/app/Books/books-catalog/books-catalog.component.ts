@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {BookService} from "../../shared/service/book.service";
 import {Book} from "../../shared/model/books.model";
 
@@ -10,18 +10,34 @@ import {Book} from "../../shared/model/books.model";
 export class BooksCatalogComponent implements OnInit {
 
   allBooks: Book[] = [];
-
+  orderBook = [];
+  IforderBookinStorage = [];
 
   constructor(
     private service: BookService
-
   ) { }
 
   ngOnInit() {
+
+    this.IforderBookinStorage = JSON.parse(localStorage.getItem('orderBookId')) || [];
+    this.IforderBookinStorage.forEach((elem)=>{
+      this.orderBook.push(elem);
+    });
+
+
     this.service.getAllBooks()
       .subscribe((books:Book[])=>{
         this.allBooks = books;
-      })
-  }
+      });
+  };
+
+  addBook(id){
+    this.orderBook.push(id);
+    localStorage.setItem('orderBookId', JSON.stringify(this.orderBook));
+  };
+
+
+
+
 
 }

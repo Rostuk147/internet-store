@@ -1,0 +1,18 @@
+<div class="row">
+<ng-container *ngFor="let book of orderBook">
+<div class="col-md-2">
+  <div class="card mb-3">
+    <h3 class="card-header">{{book.name}}</h3>
+    <img style="height: 200px; width: 100%; display: block;" src="{{book.photo}}" alt="Card image">
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><span>Author:</span>{{book.author}}</li>
+      <li class="list-group-item"><span>Price:</span>{{book.price}}</li>
+    </ul>
+      <div class="button-wrapp">
+        <button  type="button" class="btn btn-warning" (click)="removeBook(book.id)">Remove From Cart</button>
+      </div>
+  </div>
+</div>
+</ng-container>
+</div>

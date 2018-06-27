@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {BooksComponent} from "./books.component";
 import {BookDetailPageComponent} from "./book-detail-page/book-detail-page.component";
 import {BooksCatalogComponent} from "./books-catalog/books-catalog.component";
+import {CartComponent} from "./Cart/cart/cart.component";
+
 
 
 const routes: Routes = [
@@ -10,6 +12,8 @@ const routes: Routes = [
       {path: 'catalog', component: BooksCatalogComponent},
       {path: 'catalog/book/:id', component: BookDetailPageComponent},
     ]},
+  {path: 'cart', component: CartComponent}
+
 ];
 
 @NgModule({
