@@ -5,8 +5,6 @@ import 'rxjs/add/operator/map';
 import {Api} from "./api.service";
 
 
-
-
 @Injectable()
 
 export class BookService extends Api{
@@ -24,10 +22,8 @@ export class BookService extends Api{
       .map((book) => book[0] ? book[0] : undefined);
   }
 
-  test(){
-    return this.get(`books?name_like=^php`);
+  search(key){
+    return this.get(`books?name_like=^${key}`);
   }
-
-
 
 }

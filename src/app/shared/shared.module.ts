@@ -12,6 +12,8 @@ import { CategoryComponent } from './category/category.component';
 import {BookService} from "./service/book.service";
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
+import {searchService} from "./service/search.service";
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -30,7 +32,8 @@ import {ReactiveFormsModule, FormsModule} from "@angular/forms";
     WelcomeComponent,
     HomeComponent,
     NotFoundComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchComponent
   ],
   exports: [
     HeaderComponent,
@@ -44,7 +47,8 @@ import {ReactiveFormsModule, FormsModule} from "@angular/forms";
     ReactiveFormsModule
   ],
   providers: [
-    BookService
+    BookService,
+    searchService
   ]
 })
 export class SharedModule { }

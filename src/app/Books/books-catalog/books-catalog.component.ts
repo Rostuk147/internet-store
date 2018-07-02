@@ -1,26 +1,38 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {BookService} from "../../shared/service/book.service";
 import {Book} from "../../shared/model/books.model";
+import {searchService} from "../../shared/service/search.service";
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
   selector: 'app-books-catalog',
   templateUrl: './books-catalog.component.html',
   styleUrls: ['./books-catalog.component.sass']
 })
-export class BooksCatalogComponent implements OnInit {
+export class BooksCatalogComponent implements OnInit,  OnDestroy{
 
   allBooks: Book[] = [];
   orderBook = [];
-  IforderBookinStorage = [];
+  ifOrderBookInStorage = [];
+  message: any;
+  subscription: Subscription;
+
 
   constructor(
-    private service: BookService
-  ) { }
+    private service: BookService,
+    private searchService: searchService
+  ) {
+    this.subscription = this.searchService.getKey().subscribe((message) => {
+      this.message = message;
+      this.search();
+    });
+  }
+
 
   ngOnInit() {
 
-    this.IforderBookinStorage = JSON.parse(localStorage.getItem('orderBookId')) || [];
-    this.IforderBookinStorage.forEach((elem)=>{
+    this.ifOrderBookInStorage = JSON.parse(localStorage.getItem('orderBookId')) || [];
+    this.ifOrderBookInStorage.forEach((elem)=>{
       this.orderBook.push(elem);
     });
 
@@ -36,13 +48,17 @@ export class BooksCatalogComponent implements OnInit {
     localStorage.setItem('orderBookId', JSON.stringify(this.orderBook));
   };
 
-  test(){
-    this.service.test()
-      .subscribe((data)=>{
+
+  search(){
+    this.service.search(this.message.text)
+      .subscribe((data:Book[])=>{
+        this.allBooks = data;
         console.log(data)
-      })
+      });
   }
 
-
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
 }
