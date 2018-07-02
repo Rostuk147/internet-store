@@ -17,4 +17,14 @@ export class searchService {
     return this.subject.asObservable();
   }
 
+
+  sendCategoryKey(message: string): void {
+    this.subject.next({text: message});
+  }
+
+
+  getCategoryKey(): Observable<any> {
+    return this.subject.asObservable();
+  }
+
 }

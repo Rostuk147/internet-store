@@ -23,7 +23,7 @@ export class BookService extends Api{
   }
 
   search(key){
-    return this.get(`books?name_like=^${key}`);
+    return this.get(`books?category_like=^${key}`);
   }
 
 
