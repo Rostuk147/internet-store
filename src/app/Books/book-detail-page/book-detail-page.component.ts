@@ -12,7 +12,7 @@ export class BookDetailPageComponent implements OnInit {
 
 
   id: number;
-  book: Book[];
+  book: Book[] = [];
 
   constructor(
     private route: ActivatedRoute,

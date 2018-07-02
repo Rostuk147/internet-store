@@ -16,7 +16,7 @@ export class BooksCatalogComponent implements OnInit,  OnDestroy{
   ifOrderBookInStorage = [];
   message: any;
   subscription: Subscription;
-
+  notFound: boolean = false;
 
   constructor(
     private service: BookService,
@@ -53,7 +53,11 @@ export class BooksCatalogComponent implements OnInit,  OnDestroy{
     this.service.search(this.message.text)
       .subscribe((data:Book[])=>{
         this.allBooks = data;
-        console.log(data)
+        if(data.length <=0){
+          this.notFound = true;
+        } else {
+          this.notFound = false;
+        }
       });
   }
 

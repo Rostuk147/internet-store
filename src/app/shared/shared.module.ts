@@ -14,6 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 import {searchService} from "./service/search.service";
 import { SearchComponent } from './search/search.component';
+import { LatestBookComponent } from '../Home/latest-book/latest-book.component';
 
 
 
@@ -33,7 +34,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     NotFoundComponent,
     CategoryComponent,
-    SearchComponent
+    SearchComponent,
+    LatestBookComponent
   ],
   exports: [
     HeaderComponent,
