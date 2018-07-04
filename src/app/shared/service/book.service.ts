@@ -13,7 +13,6 @@ export class BookService extends Api{
   }
 
   getAllBooks() {
-    // return this.get('books?category=js&_sort=price&_order=asc')
     return this.get('books')
   }
 
@@ -26,6 +25,10 @@ export class BookService extends Api{
     return this.get(`books?category_like=^${key}`);
   }
 
+
+  getRange(startVal, endVal){
+    return this.get(`books?price_gte=${startVal}&price_lte=${endVal}`);
+  }
 
 
 }

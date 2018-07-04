@@ -19,6 +19,9 @@ export class BooksCatalogComponent implements OnInit,  OnDestroy{
   subscription: Subscription;
   subscriptionCategory: Subscription;
   notFound: boolean = false;
+  sliderStartValue: number = 0;
+  sliderEndValue: number = 2000;
+  someRange= [ 1, 2000 ];
 
 
   constructor(
@@ -71,5 +74,26 @@ export class BooksCatalogComponent implements OnInit,  OnDestroy{
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+
+
+  onRangeChange(e){
+    this.sliderStartValue = e[0];
+    this.sliderEndValue = e[1];
+
+    let startVal = e[0];
+    let endVal = e[1];
+
+    this.service.getRange(startVal, endVal).
+    subscribe((books: Book[])=>{
+      if(books.length <= 0){
+        this.notFound = true;
+      } else {
+        this.allBooks = books;
+        this.notFound = false;
+      }
+    });
+  };
+
+
 
 }

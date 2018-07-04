@@ -6,14 +6,15 @@ import {BooksRoutingModule} from "./books.routing.module";
 import { BookDetailPageComponent } from './book-detail-page/book-detail-page.component';
 import { BooksCatalogComponent } from './books-catalog/books-catalog.component';
 import { CartComponent } from './Cart/cart/cart.component';
-
+import { NouisliderModule } from 'ng2-nouislider';
 
 
 @NgModule({
   imports: [
     CommonModule,
     BooksRoutingModule,
-    SharedModule
+    SharedModule,
+    NouisliderModule
   ],
   declarations: [
     BooksComponent,
