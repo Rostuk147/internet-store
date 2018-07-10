@@ -38,6 +38,11 @@ export class CartComponent implements OnInit {
    this.orderBookId = this.orderBookId.filter(c => c !== id);
     localStorage.setItem('orderBookId', JSON.stringify(this.orderBookId));
 
+    if(this.orderBookId.length < 1){
+      this.storage = false;
+    }
+
+
     this.orderBook = this.orderBook.filter(c => c.id !== id);
   }
 
