@@ -12,12 +12,18 @@ export class CartComponent implements OnInit {
 
   orderBookId = [];
   orderBook = [];
+  storage: boolean = false;
   constructor(
     private service: BookService
   ) {}
 
   ngOnInit() {
     this.orderBookId = JSON.parse(localStorage.getItem('orderBookId')) || [];
+
+    if(this.orderBookId.length > 0){
+      this.storage = true;
+    }
+
 
     this.orderBookId.forEach((elementId)=>{
       this.service.getSingleBook(elementId)

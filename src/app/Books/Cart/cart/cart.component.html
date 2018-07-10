@@ -16,3 +16,9 @@
 </div>
 </ng-container>
 </div>
+
+<div *ngIf="storage" class="row">
+  <div class="col">
+    <button type="button" class="btn btn-success" [routerLink]="['/order']">Order</button>
+  </div>
+</div>

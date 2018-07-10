@@ -7,6 +7,8 @@ import { BookDetailPageComponent } from './book-detail-page/book-detail-page.com
 import { BooksCatalogComponent } from './books-catalog/books-catalog.component';
 import { CartComponent } from './Cart/cart/cart.component';
 import { NouisliderModule } from 'ng2-nouislider';
+import { OrderComponent } from './order/order.component';
+import { CreditCardDirective } from './credit-card.directive';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NouisliderModule } from 'ng2-nouislider';
     BooksComponent,
     BookDetailPageComponent,
     BooksCatalogComponent,
-    CartComponent
+    CartComponent,
+    OrderComponent,
+    CreditCardDirective
   ],
   exports: []
 })
